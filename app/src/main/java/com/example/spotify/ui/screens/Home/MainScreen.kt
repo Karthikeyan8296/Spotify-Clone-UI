@@ -1,5 +1,6 @@
 package com.example.spotify.ui.screens.Home
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
@@ -19,10 +20,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import com.example.spotify.data.navItemsList
-import com.example.spotify.ui.components.BottomNavigationComponent
 import com.example.spotify.ui.theme.SpotifyDark
 import com.example.spotify.ui.theme.SpotifyTheme
 
@@ -42,7 +43,7 @@ fun MainScreen(navController: NavHostController) {
                             onClick = { selectedIndex = index },
                             icon = {
                                 Icon(
-                                    imageVector = navItems.icon,
+                                    painter = painterResource(id = navItems.icon),
                                     contentDescription = null
                                 )
                             },

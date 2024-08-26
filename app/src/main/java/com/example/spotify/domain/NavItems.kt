@@ -1,9 +1,9 @@
 package com.example.spotify.domain
 
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.annotation.DrawableRes
 
 data class NavItems(
     val title: String,
-    val icon: ImageVector,
+    val icon: Int,
     val route: String
 )
